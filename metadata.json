@@ -1,0 +1,6 @@
+{
+  "name": "Watcha",
+  "description": "Watcha - Premium Android Media Player by FRAZIYM Soft",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
