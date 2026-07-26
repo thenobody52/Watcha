@@ -1,0 +1,187 @@
+﻿2026-07-26T07:14:44.7127856Z ##[debug]Evaluating condition for step: 'Checkout Repository'
+2026-07-26T07:14:44.7167080Z ##[debug]Evaluating: success()
+2026-07-26T07:14:44.7172328Z ##[debug]Evaluating success:
+2026-07-26T07:14:44.7190154Z ##[debug]=> true
+2026-07-26T07:14:44.7196676Z ##[debug]Result: true
+2026-07-26T07:14:44.7224167Z ##[debug]Starting: Checkout Repository
+2026-07-26T07:14:44.7303678Z ##[debug]Register post job cleanup for action: actions/checkout@v4
+2026-07-26T07:14:44.7400066Z ##[debug]Loading inputs
+2026-07-26T07:14:44.7413759Z ##[debug]Evaluating: github.repository
+2026-07-26T07:14:44.7414851Z ##[debug]Evaluating Index:
+2026-07-26T07:14:44.7416949Z ##[debug]..Evaluating github:
+2026-07-26T07:14:44.7419149Z ##[debug]..=> Object
+2026-07-26T07:14:44.7425300Z ##[debug]..Evaluating String:
+2026-07-26T07:14:44.7426194Z ##[debug]..=> 'repository'
+2026-07-26T07:14:44.7430160Z ##[debug]=> 'thenobody52/Watcha'
+2026-07-26T07:14:44.7431688Z ##[debug]Result: 'thenobody52/Watcha'
+2026-07-26T07:14:44.7435639Z ##[debug]Evaluating: github.token
+2026-07-26T07:14:44.7436255Z ##[debug]Evaluating Index:
+2026-07-26T07:14:44.7436756Z ##[debug]..Evaluating github:
+2026-07-26T07:14:44.7437286Z ##[debug]..=> Object
+2026-07-26T07:14:44.7438035Z ##[debug]..Evaluating String:
+2026-07-26T07:14:44.7438530Z ##[debug]..=> 'token'
+2026-07-26T07:14:44.7442799Z ##[debug]=> '***'
+2026-07-26T07:14:44.7446623Z ##[debug]Result: '***'
+2026-07-26T07:14:44.7470066Z ##[debug]Loading env
+2026-07-26T07:14:44.7537753Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-26T07:14:44.7546624Z ##[group]Run actions/checkout@v4
+2026-07-26T07:14:44.7547664Z with:
+2026-07-26T07:14:44.7548202Z   repository: thenobody52/Watcha
+2026-07-26T07:14:44.7552068Z   token: ***
+2026-07-26T07:14:44.7552490Z   ssh-strict: true
+2026-07-26T07:14:44.7552944Z   ssh-user: git
+2026-07-26T07:14:44.7553381Z   persist-credentials: true
+2026-07-26T07:14:44.7554100Z   clean: true
+2026-07-26T07:14:44.7554530Z   sparse-checkout-cone-mode: true
+2026-07-26T07:14:44.7555032Z   fetch-depth: 1
+2026-07-26T07:14:44.7555452Z   fetch-tags: false
+2026-07-26T07:14:44.7555877Z   show-progress: true
+2026-07-26T07:14:44.7556304Z   lfs: false
+2026-07-26T07:14:44.7556697Z   submodules: false
+2026-07-26T07:14:44.7557126Z   set-safe-directory: true
+2026-07-26T07:14:44.7558046Z   allow-unsafe-pr-checkout: false
+2026-07-26T07:14:44.7559614Z ##[endgroup]
+2026-07-26T07:14:44.8502373Z ##[debug]GITHUB_WORKSPACE = '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:44.8504398Z ##[debug]qualified repository = 'thenobody52/Watcha'
+2026-07-26T07:14:44.8505476Z ##[debug]ref = 'refs/heads/main'
+2026-07-26T07:14:44.8506611Z ##[debug]commit = '7694381c6bcbc255b7fc4316a29eb34a26991561'
+2026-07-26T07:14:44.8507986Z ##[debug]clean = true
+2026-07-26T07:14:44.8509520Z ##[debug]filter = undefined
+2026-07-26T07:14:44.8511261Z ##[debug]fetch depth = 1
+2026-07-26T07:14:44.8513028Z ##[debug]fetch tags = false
+2026-07-26T07:14:44.8514810Z ##[debug]show progress = true
+2026-07-26T07:14:44.8516366Z ##[debug]lfs = false
+2026-07-26T07:14:44.8517987Z ##[debug]submodules = false
+2026-07-26T07:14:44.8519716Z ##[debug]recursive submodules = false
+2026-07-26T07:14:44.8536334Z ##[debug]GitHub Host URL = 
+2026-07-26T07:14:44.8538180Z ##[debug]allow unsafe PR checkout = false
+2026-07-26T07:14:44.8541014Z ::add-matcher::/home/runner/work/_actions/actions/checkout/v4/dist/problem-matcher.json
+2026-07-26T07:14:44.8642601Z ##[debug]Added matchers: 'checkout-git'. Problem matchers scan action output for known warning or error strings and report these inline.
+2026-07-26T07:14:44.8649641Z Syncing repository: thenobody52/Watcha
+2026-07-26T07:14:44.8651884Z ::group::Getting Git version info
+2026-07-26T07:14:44.8653797Z ##[group]Getting Git version info
+2026-07-26T07:14:44.8655093Z Working directory is '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:44.8657346Z ##[debug]Getting git version
+2026-07-26T07:14:44.8658544Z [command]/usr/bin/git version
+2026-07-26T07:14:44.8670773Z git version 2.54.0
+2026-07-26T07:14:44.8688225Z ##[debug]0
+2026-07-26T07:14:44.8689811Z ##[debug]git version 2.54.0
+2026-07-26T07:14:44.8690745Z ##[debug]
+2026-07-26T07:14:44.8692523Z ##[debug]Set git useragent to: git/2.54.0 (github-actions-checkout)
+2026-07-26T07:14:44.8694458Z ::endgroup::
+2026-07-26T07:14:44.8695273Z ##[endgroup]
+2026-07-26T07:14:44.8700873Z ::add-mask::***
+2026-07-26T07:14:44.8704068Z Temporarily overriding HOME='/home/runner/work/_temp/2a9af593-e11b-464f-86a9-b03d5f82a5ab' before making global git config changes
+2026-07-26T07:14:44.8706881Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-26T07:14:44.8709260Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Watcha/Watcha
+2026-07-26T07:14:44.8749592Z ##[debug]0
+2026-07-26T07:14:44.8751148Z ##[debug]
+2026-07-26T07:14:44.8755815Z Deleting the contents of '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:44.8762427Z ::group::Initializing the repository
+2026-07-26T07:14:44.8763653Z ##[group]Initializing the repository
+2026-07-26T07:14:44.8770887Z [command]/usr/bin/git init /home/runner/work/Watcha/Watcha
+2026-07-26T07:14:44.8863827Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-26T07:14:44.8868274Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-26T07:14:44.8879196Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-26T07:14:44.8881177Z hint: call:
+2026-07-26T07:14:44.8882474Z hint:
+2026-07-26T07:14:44.8883825Z hint: 	git config --global init.defaultBranch <name>
+2026-07-26T07:14:44.8885226Z hint:
+2026-07-26T07:14:44.8886552Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-26T07:14:44.8888817Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-26T07:14:44.8889985Z hint:
+2026-07-26T07:14:44.8890873Z hint: 	git branch -m <name>
+2026-07-26T07:14:44.8891991Z hint:
+2026-07-26T07:14:44.8893173Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-26T07:14:44.8894604Z Initialized empty Git repository in /home/runner/work/Watcha/Watcha/.git/
+2026-07-26T07:14:44.8896181Z ##[debug]0
+2026-07-26T07:14:44.8898331Z ##[debug]Initialized empty Git repository in /home/runner/work/Watcha/Watcha/.git/
+2026-07-26T07:14:44.8899761Z ##[debug]
+2026-07-26T07:14:44.8900956Z [command]/usr/bin/git remote add origin https://github.com/thenobody52/Watcha
+2026-07-26T07:14:44.8929961Z ##[debug]0
+2026-07-26T07:14:44.8931384Z ##[debug]
+2026-07-26T07:14:44.8932785Z ::endgroup::
+2026-07-26T07:14:44.8933601Z ##[endgroup]
+2026-07-26T07:14:44.8934840Z ::group::Disabling automatic garbage collection
+2026-07-26T07:14:44.8936011Z ##[group]Disabling automatic garbage collection
+2026-07-26T07:14:44.8937228Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-26T07:14:44.8968604Z ##[debug]0
+2026-07-26T07:14:44.8970508Z ##[debug]
+2026-07-26T07:14:44.8972716Z ::endgroup::
+2026-07-26T07:14:44.8973578Z ##[endgroup]
+2026-07-26T07:14:44.8975267Z ::group::Setting up auth
+2026-07-26T07:14:44.8976209Z ##[group]Setting up auth
+2026-07-26T07:14:44.8978387Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-26T07:14:44.9008825Z ##[debug]1
+2026-07-26T07:14:44.9010318Z ##[debug]
+2026-07-26T07:14:44.9016248Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-26T07:14:44.9360391Z ##[debug]0
+2026-07-26T07:14:44.9361469Z ##[debug]
+2026-07-26T07:14:44.9369179Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-26T07:14:44.9401387Z ##[debug]1
+2026-07-26T07:14:44.9402924Z ##[debug]
+2026-07-26T07:14:44.9408390Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-26T07:14:44.9657874Z ##[debug]0
+2026-07-26T07:14:44.9659404Z ##[debug]
+2026-07-26T07:14:44.9665659Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-26T07:14:44.9698843Z ##[debug]1
+2026-07-26T07:14:44.9700455Z ##[debug]
+2026-07-26T07:14:44.9705990Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-26T07:14:44.9936886Z ##[debug]0
+2026-07-26T07:14:44.9938126Z ##[debug]
+2026-07-26T07:14:44.9945794Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-26T07:14:44.9978310Z ##[debug]0
+2026-07-26T07:14:44.9979565Z ##[debug]
+2026-07-26T07:14:44.9986194Z ::endgroup::
+2026-07-26T07:14:44.9986897Z ##[endgroup]
+2026-07-26T07:14:44.9988322Z ::group::Fetching the repository
+2026-07-26T07:14:44.9989049Z ##[group]Fetching the repository
+2026-07-26T07:14:44.9996067Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7694381c6bcbc255b7fc4316a29eb34a26991561:refs/remotes/origin/main
+2026-07-26T07:14:45.3378313Z From https://github.com/thenobody52/Watcha
+2026-07-26T07:14:45.3379686Z  * [new ref]         7694381c6bcbc255b7fc4316a29eb34a26991561 -> origin/main
+2026-07-26T07:14:45.3419824Z ##[debug]0
+2026-07-26T07:14:45.3421283Z ##[debug]
+2026-07-26T07:14:45.3422631Z ::endgroup::
+2026-07-26T07:14:45.3423283Z ##[endgroup]
+2026-07-26T07:14:45.3424726Z ::group::Determining the checkout info
+2026-07-26T07:14:45.3425745Z ##[group]Determining the checkout info
+2026-07-26T07:14:45.3427444Z ::endgroup::
+2026-07-26T07:14:45.3428438Z ##[endgroup]
+2026-07-26T07:14:45.3432254Z [command]/usr/bin/git sparse-checkout disable
+2026-07-26T07:14:45.3481526Z ##[debug]0
+2026-07-26T07:14:45.3483105Z ##[debug]
+2026-07-26T07:14:45.3488862Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-26T07:14:45.3526681Z ##[debug]0
+2026-07-26T07:14:45.3528487Z ##[debug]
+2026-07-26T07:14:45.3530336Z ::group::Checking out the ref
+2026-07-26T07:14:45.3531460Z ##[group]Checking out the ref
+2026-07-26T07:14:45.3534488Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-26T07:14:45.3714398Z Switched to a new branch 'main'
+2026-07-26T07:14:45.3718363Z branch 'main' set up to track 'origin/main'.
+2026-07-26T07:14:45.3725135Z ##[debug]0
+2026-07-26T07:14:45.3727779Z ##[debug]branch 'main' set up to track 'origin/main'.
+2026-07-26T07:14:45.3729601Z ##[debug]
+2026-07-26T07:14:45.3731469Z ::endgroup::
+2026-07-26T07:14:45.3732365Z ##[endgroup]
+2026-07-26T07:14:45.3768689Z ##[debug]0
+2026-07-26T07:14:45.3771094Z ##[debug]commit 7694381c6bcbc255b7fc4316a29eb34a26991561
+2026-07-26T07:14:45.3773157Z ##[debug]Author: Akik Faraji <theakikfaraji@gmail.com>
+2026-07-26T07:14:45.3775024Z ##[debug]Date:   Sun Jul 26 13:07:57 2026 +0600
+2026-07-26T07:14:45.3776225Z ##[debug]
+2026-07-26T07:14:45.3777190Z ##[debug]    Initial Watcha project
+2026-07-26T07:14:45.3778678Z ##[debug]
+2026-07-26T07:14:45.3779711Z [command]/usr/bin/git log -1 --format=%H
+2026-07-26T07:14:45.3800710Z 7694381c6bcbc255b7fc4316a29eb34a26991561
+2026-07-26T07:14:45.3804982Z ##[debug]0
+2026-07-26T07:14:45.3806633Z ##[debug]7694381c6bcbc255b7fc4316a29eb34a26991561
+2026-07-26T07:14:45.3808166Z ##[debug]
+2026-07-26T07:14:45.3812059Z ##[debug]Unsetting HOME override
+2026-07-26T07:14:45.3827412Z ::remove-matcher owner=checkout-git::
+2026-07-26T07:14:45.3850448Z ##[debug]Removed matchers: 'checkout-git'
+2026-07-26T07:14:45.4083054Z ##[debug]Node Action run completed with exit code 0
+2026-07-26T07:14:45.4128643Z ##[debug]Save intra-action state isPost = true
+2026-07-26T07:14:45.4130303Z ##[debug]Save intra-action state setSafeDirectory = true
+2026-07-26T07:14:45.4132336Z ##[debug]Save intra-action state repositoryPath = /home/runner/work/Watcha/Watcha
+2026-07-26T07:14:45.4140548Z ##[debug]Set output commit = 7694381c6bcbc255b7fc4316a29eb34a26991561
+2026-07-26T07:14:45.4142722Z ##[debug]Set output ref = refs/heads/main
+2026-07-26T07:14:45.4162270Z ##[debug]Finishing: Checkout Repository

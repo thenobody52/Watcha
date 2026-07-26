@@ -1,0 +1,553 @@
+﻿2026-07-26T07:14:43.2650876Z ##[debug]Starting: build
+2026-07-26T07:14:43.2680882Z ##[debug]Cleaning runner temp folder: /home/runner/work/_temp
+2026-07-26T07:14:43.2853067Z ##[debug]Starting: Set up job
+2026-07-26T07:14:43.2854171Z Current runner version: '2.336.0'
+2026-07-26T07:14:43.2876859Z ##[group]Runner Image Provisioner
+2026-07-26T07:14:43.2877909Z Hosted Compute Agent
+2026-07-26T07:14:43.2878724Z Version: 20260707.563
+2026-07-26T07:14:43.2879388Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-26T07:14:43.2880116Z Build Date: 2026-07-07T19:33:50Z
+2026-07-26T07:14:43.2880896Z Worker ID: {0c093e54-1e86-4006-8138-a972b8cabe7d}
+2026-07-26T07:14:43.2881650Z Azure Region: northcentralus
+2026-07-26T07:14:43.2882329Z ##[endgroup]
+2026-07-26T07:14:43.2883732Z ##[group]Operating System
+2026-07-26T07:14:43.2884375Z Ubuntu
+2026-07-26T07:14:43.2885003Z 24.04.4
+2026-07-26T07:14:43.2885534Z LTS
+2026-07-26T07:14:43.2886058Z ##[endgroup]
+2026-07-26T07:14:43.2886731Z ##[group]Runner Image
+2026-07-26T07:14:43.2887346Z Image: ubuntu-24.04
+2026-07-26T07:14:43.2888522Z Version: 20260720.247.2
+2026-07-26T07:14:43.2889675Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-26T07:14:43.2891269Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-07-26T07:14:43.2892278Z ##[endgroup]
+2026-07-26T07:14:43.2893871Z ##[group]GITHUB_TOKEN Permissions
+2026-07-26T07:14:43.2895791Z Contents: read
+2026-07-26T07:14:43.2896436Z Metadata: read
+2026-07-26T07:14:43.2897144Z Packages: read
+2026-07-26T07:14:43.2897911Z ##[endgroup]
+2026-07-26T07:14:43.2900075Z Secret source: Actions
+2026-07-26T07:14:43.2901448Z ##[debug]Primary repository: thenobody52/Watcha
+2026-07-26T07:14:43.2902308Z Prepare workflow directory
+2026-07-26T07:14:43.2975593Z ##[debug]Creating pipeline directory: '/home/runner/work/Watcha'
+2026-07-26T07:14:43.2979404Z ##[debug]Creating workspace directory: '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:43.2981194Z ##[debug]Update context data
+2026-07-26T07:14:43.2984668Z ##[debug]Evaluating job-level environment variables
+2026-07-26T07:14:43.3293732Z ##[debug]Evaluating job container
+2026-07-26T07:14:43.3298551Z ##[debug]Evaluating job service containers
+2026-07-26T07:14:43.3302602Z ##[debug]Evaluating job defaults
+2026-07-26T07:14:43.3342892Z Prepare all required actions
+2026-07-26T07:14:43.3403171Z Getting action download info
+2026-07-26T07:14:43.5603848Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-07-26T07:14:43.7864853Z ##[debug]Download 'https://codeload.github.com/actions/checkout/tar.gz/11d5960a326750d5838078e36cf38b85af677262' to '/home/runner/work/_actions/_temp_22b8d37f-3b57-4831-b20c-02dd0360ce4e/6e3e2c8b-f173-44e4-9bbe-b68a2881764a.tar.gz'
+2026-07-26T07:14:43.9129392Z ##[debug]Unwrap 'checkout-11d5960a326750d5838078e36cf38b85af677262' to '/home/runner/work/_actions/actions/checkout/v4'
+2026-07-26T07:14:43.9252463Z ##[debug]Archive '/home/runner/work/_actions/_temp_22b8d37f-3b57-4831-b20c-02dd0360ce4e/6e3e2c8b-f173-44e4-9bbe-b68a2881764a.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/checkout/v4'.
+2026-07-26T07:14:43.9349252Z Download action repository 'actions/setup-java@v4' (SHA:c1e323688fd81a25caa38c78aa6df2d33d3e20d9)
+2026-07-26T07:14:44.2630090Z ##[debug]Download 'https://codeload.github.com/actions/setup-java/tar.gz/c1e323688fd81a25caa38c78aa6df2d33d3e20d9' to '/home/runner/work/_actions/_temp_8fc050f3-b77a-4645-8003-47377a51c65d/542b388b-e1ce-4804-9ffd-1f663e9ed702.tar.gz'
+2026-07-26T07:14:44.3549755Z ##[debug]Unwrap 'setup-java-c1e323688fd81a25caa38c78aa6df2d33d3e20d9' to '/home/runner/work/_actions/actions/setup-java/v4'
+2026-07-26T07:14:44.3839345Z ##[debug]Archive '/home/runner/work/_actions/_temp_8fc050f3-b77a-4645-8003-47377a51c65d/542b388b-e1ce-4804-9ffd-1f663e9ed702.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/setup-java/v4'.
+2026-07-26T07:14:44.3902261Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-07-26T07:14:44.4482767Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_upload-artifact/ea165f8d65b6e75b540449e92b4886f43607fa02.tar.gz' to '/home/runner/work/_actions/_temp_0244e097-cb7a-4a2a-a7a4-57d20f1efaed/c273ef4d-9540-4514-8eab-4332f8905316.tar.gz'
+2026-07-26T07:14:44.5271847Z ##[debug]Unwrap 'actions-upload-artifact-ea165f8' to '/home/runner/work/_actions/actions/upload-artifact/v4'
+2026-07-26T07:14:44.5538781Z ##[debug]Archive '/home/runner/work/_actions/_temp_0244e097-cb7a-4a2a-a7a4-57d20f1efaed/c273ef4d-9540-4514-8eab-4332f8905316.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/upload-artifact/v4'.
+2026-07-26T07:14:44.5687156Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/checkout/v4/action.yml'.
+2026-07-26T07:14:44.6466446Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/setup-java/v4/action.yml'.
+2026-07-26T07:14:44.6555407Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/upload-artifact/v4/action.yml'.
+2026-07-26T07:14:44.6672303Z ##[debug]Set step '__actions_checkout' display name to: 'Checkout Repository'
+2026-07-26T07:14:44.6676257Z ##[debug]Set step '__actions_setup-java' display name to: 'Set up JDK 17'
+2026-07-26T07:14:44.6679013Z ##[debug]Set step '__run' display name to: 'Grant execute permission for gradlew'
+2026-07-26T07:14:44.6681280Z ##[debug]Set step '__run_2' display name to: 'Build Debug APK'
+2026-07-26T07:14:44.6683400Z ##[debug]Set step '__run_3' display name to: 'Run Unit Tests'
+2026-07-26T07:14:44.6685553Z ##[debug]Set step '__actions_upload-artifact' display name to: 'Upload Debug APK Artifact'
+2026-07-26T07:14:44.6686434Z Complete job name: build
+2026-07-26T07:14:44.6718642Z ##[debug]Collect running processes for tracking orphan processes.
+2026-07-26T07:14:44.6963575Z ##[debug]Finishing: Set up job
+2026-07-26T07:14:44.7127880Z ##[debug]Evaluating condition for step: 'Checkout Repository'
+2026-07-26T07:14:44.7167095Z ##[debug]Evaluating: success()
+2026-07-26T07:14:44.7172349Z ##[debug]Evaluating success:
+2026-07-26T07:14:44.7190178Z ##[debug]=> true
+2026-07-26T07:14:44.7196691Z ##[debug]Result: true
+2026-07-26T07:14:44.7224183Z ##[debug]Starting: Checkout Repository
+2026-07-26T07:14:44.7303693Z ##[debug]Register post job cleanup for action: actions/checkout@v4
+2026-07-26T07:14:44.7400090Z ##[debug]Loading inputs
+2026-07-26T07:14:44.7413781Z ##[debug]Evaluating: github.repository
+2026-07-26T07:14:44.7414859Z ##[debug]Evaluating Index:
+2026-07-26T07:14:44.7416966Z ##[debug]..Evaluating github:
+2026-07-26T07:14:44.7419171Z ##[debug]..=> Object
+2026-07-26T07:14:44.7425330Z ##[debug]..Evaluating String:
+2026-07-26T07:14:44.7426200Z ##[debug]..=> 'repository'
+2026-07-26T07:14:44.7430179Z ##[debug]=> 'thenobody52/Watcha'
+2026-07-26T07:14:44.7431699Z ##[debug]Result: 'thenobody52/Watcha'
+2026-07-26T07:14:44.7435688Z ##[debug]Evaluating: github.token
+2026-07-26T07:14:44.7436265Z ##[debug]Evaluating Index:
+2026-07-26T07:14:44.7436760Z ##[debug]..Evaluating github:
+2026-07-26T07:14:44.7437290Z ##[debug]..=> Object
+2026-07-26T07:14:44.7438038Z ##[debug]..Evaluating String:
+2026-07-26T07:14:44.7438533Z ##[debug]..=> 'token'
+2026-07-26T07:14:44.7442808Z ##[debug]=> '***'
+2026-07-26T07:14:44.7446627Z ##[debug]Result: '***'
+2026-07-26T07:14:44.7470077Z ##[debug]Loading env
+2026-07-26T07:14:44.7537783Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-26T07:14:44.7546648Z ##[group]Run actions/checkout@v4
+2026-07-26T07:14:44.7547702Z with:
+2026-07-26T07:14:44.7548206Z   repository: thenobody52/Watcha
+2026-07-26T07:14:44.7552071Z   token: ***
+2026-07-26T07:14:44.7552515Z   ssh-strict: true
+2026-07-26T07:14:44.7552948Z   ssh-user: git
+2026-07-26T07:14:44.7553385Z   persist-credentials: true
+2026-07-26T07:14:44.7554104Z   clean: true
+2026-07-26T07:14:44.7554535Z   sparse-checkout-cone-mode: true
+2026-07-26T07:14:44.7555035Z   fetch-depth: 1
+2026-07-26T07:14:44.7555455Z   fetch-tags: false
+2026-07-26T07:14:44.7555881Z   show-progress: true
+2026-07-26T07:14:44.7556307Z   lfs: false
+2026-07-26T07:14:44.7556700Z   submodules: false
+2026-07-26T07:14:44.7557129Z   set-safe-directory: true
+2026-07-26T07:14:44.7558055Z   allow-unsafe-pr-checkout: false
+2026-07-26T07:14:44.7559630Z ##[endgroup]
+2026-07-26T07:14:44.8502465Z ##[debug]GITHUB_WORKSPACE = '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:44.8504407Z ##[debug]qualified repository = 'thenobody52/Watcha'
+2026-07-26T07:14:44.8505481Z ##[debug]ref = 'refs/heads/main'
+2026-07-26T07:14:44.8506618Z ##[debug]commit = '7694381c6bcbc255b7fc4316a29eb34a26991561'
+2026-07-26T07:14:44.8507997Z ##[debug]clean = true
+2026-07-26T07:14:44.8509625Z ##[debug]filter = undefined
+2026-07-26T07:14:44.8511283Z ##[debug]fetch depth = 1
+2026-07-26T07:14:44.8513051Z ##[debug]fetch tags = false
+2026-07-26T07:14:44.8514824Z ##[debug]show progress = true
+2026-07-26T07:14:44.8516374Z ##[debug]lfs = false
+2026-07-26T07:14:44.8518005Z ##[debug]submodules = false
+2026-07-26T07:14:44.8519758Z ##[debug]recursive submodules = false
+2026-07-26T07:14:44.8536363Z ##[debug]GitHub Host URL = 
+2026-07-26T07:14:44.8538201Z ##[debug]allow unsafe PR checkout = false
+2026-07-26T07:14:44.8541043Z ::add-matcher::/home/runner/work/_actions/actions/checkout/v4/dist/problem-matcher.json
+2026-07-26T07:14:44.8642646Z ##[debug]Added matchers: 'checkout-git'. Problem matchers scan action output for known warning or error strings and report these inline.
+2026-07-26T07:14:44.8649674Z Syncing repository: thenobody52/Watcha
+2026-07-26T07:14:44.8651897Z ::group::Getting Git version info
+2026-07-26T07:14:44.8653812Z ##[group]Getting Git version info
+2026-07-26T07:14:44.8655500Z Working directory is '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:44.8657354Z ##[debug]Getting git version
+2026-07-26T07:14:44.8658550Z [command]/usr/bin/git version
+2026-07-26T07:14:44.8670790Z git version 2.54.0
+2026-07-26T07:14:44.8688246Z ##[debug]0
+2026-07-26T07:14:44.8689819Z ##[debug]git version 2.54.0
+2026-07-26T07:14:44.8690751Z ##[debug]
+2026-07-26T07:14:44.8692535Z ##[debug]Set git useragent to: git/2.54.0 (github-actions-checkout)
+2026-07-26T07:14:44.8694470Z ::endgroup::
+2026-07-26T07:14:44.8695279Z ##[endgroup]
+2026-07-26T07:14:44.8700899Z ::add-mask::***
+2026-07-26T07:14:44.8704081Z Temporarily overriding HOME='/home/runner/work/_temp/2a9af593-e11b-464f-86a9-b03d5f82a5ab' before making global git config changes
+2026-07-26T07:14:44.8706891Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-26T07:14:44.8709272Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Watcha/Watcha
+2026-07-26T07:14:44.8749627Z ##[debug]0
+2026-07-26T07:14:44.8751189Z ##[debug]
+2026-07-26T07:14:44.8755846Z Deleting the contents of '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:44.8762453Z ::group::Initializing the repository
+2026-07-26T07:14:44.8763659Z ##[group]Initializing the repository
+2026-07-26T07:14:44.8770915Z [command]/usr/bin/git init /home/runner/work/Watcha/Watcha
+2026-07-26T07:14:44.8863863Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-26T07:14:44.8868302Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-26T07:14:44.8879230Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-26T07:14:44.8881199Z hint: call:
+2026-07-26T07:14:44.8882489Z hint:
+2026-07-26T07:14:44.8883837Z hint: 	git config --global init.defaultBranch <name>
+2026-07-26T07:14:44.8885233Z hint:
+2026-07-26T07:14:44.8886564Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-26T07:14:44.8888852Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-26T07:14:44.8889990Z hint:
+2026-07-26T07:14:44.8890878Z hint: 	git branch -m <name>
+2026-07-26T07:14:44.8891997Z hint:
+2026-07-26T07:14:44.8893182Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-26T07:14:44.8894612Z Initialized empty Git repository in /home/runner/work/Watcha/Watcha/.git/
+2026-07-26T07:14:44.8896186Z ##[debug]0
+2026-07-26T07:14:44.8898352Z ##[debug]Initialized empty Git repository in /home/runner/work/Watcha/Watcha/.git/
+2026-07-26T07:14:44.8899773Z ##[debug]
+2026-07-26T07:14:44.8900962Z [command]/usr/bin/git remote add origin https://github.com/thenobody52/Watcha
+2026-07-26T07:14:44.8929989Z ##[debug]0
+2026-07-26T07:14:44.8931392Z ##[debug]
+2026-07-26T07:14:44.8932791Z ::endgroup::
+2026-07-26T07:14:44.8933607Z ##[endgroup]
+2026-07-26T07:14:44.8934847Z ::group::Disabling automatic garbage collection
+2026-07-26T07:14:44.8936019Z ##[group]Disabling automatic garbage collection
+2026-07-26T07:14:44.8937265Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-26T07:14:44.8968633Z ##[debug]0
+2026-07-26T07:14:44.8970526Z ##[debug]
+2026-07-26T07:14:44.8972738Z ::endgroup::
+2026-07-26T07:14:44.8973584Z ##[endgroup]
+2026-07-26T07:14:44.8975287Z ::group::Setting up auth
+2026-07-26T07:14:44.8976222Z ##[group]Setting up auth
+2026-07-26T07:14:44.8978502Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-26T07:14:44.9008849Z ##[debug]1
+2026-07-26T07:14:44.9010326Z ##[debug]
+2026-07-26T07:14:44.9016340Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-26T07:14:44.9360467Z ##[debug]0
+2026-07-26T07:14:44.9361476Z ##[debug]
+2026-07-26T07:14:44.9369206Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-26T07:14:44.9401417Z ##[debug]1
+2026-07-26T07:14:44.9402930Z ##[debug]
+2026-07-26T07:14:44.9408807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-26T07:14:44.9657948Z ##[debug]0
+2026-07-26T07:14:44.9659420Z ##[debug]
+2026-07-26T07:14:44.9665689Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-26T07:14:44.9698869Z ##[debug]1
+2026-07-26T07:14:44.9700466Z ##[debug]
+2026-07-26T07:14:44.9706037Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-26T07:14:44.9936924Z ##[debug]0
+2026-07-26T07:14:44.9938136Z ##[debug]
+2026-07-26T07:14:44.9945807Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-26T07:14:44.9978340Z ##[debug]0
+2026-07-26T07:14:44.9979574Z ##[debug]
+2026-07-26T07:14:44.9986213Z ::endgroup::
+2026-07-26T07:14:44.9986959Z ##[endgroup]
+2026-07-26T07:14:44.9988330Z ::group::Fetching the repository
+2026-07-26T07:14:44.9989054Z ##[group]Fetching the repository
+2026-07-26T07:14:44.9996082Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7694381c6bcbc255b7fc4316a29eb34a26991561:refs/remotes/origin/main
+2026-07-26T07:14:45.3378384Z From https://github.com/thenobody52/Watcha
+2026-07-26T07:14:45.3379692Z  * [new ref]         7694381c6bcbc255b7fc4316a29eb34a26991561 -> origin/main
+2026-07-26T07:14:45.3419871Z ##[debug]0
+2026-07-26T07:14:45.3421294Z ##[debug]
+2026-07-26T07:14:45.3422641Z ::endgroup::
+2026-07-26T07:14:45.3423287Z ##[endgroup]
+2026-07-26T07:14:45.3424735Z ::group::Determining the checkout info
+2026-07-26T07:14:45.3425751Z ##[group]Determining the checkout info
+2026-07-26T07:14:45.3427452Z ::endgroup::
+2026-07-26T07:14:45.3428446Z ##[endgroup]
+2026-07-26T07:14:45.3432263Z [command]/usr/bin/git sparse-checkout disable
+2026-07-26T07:14:45.3481578Z ##[debug]0
+2026-07-26T07:14:45.3483171Z ##[debug]
+2026-07-26T07:14:45.3488884Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-26T07:14:45.3526704Z ##[debug]0
+2026-07-26T07:14:45.3528496Z ##[debug]
+2026-07-26T07:14:45.3530345Z ::group::Checking out the ref
+2026-07-26T07:14:45.3531466Z ##[group]Checking out the ref
+2026-07-26T07:14:45.3534512Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-26T07:14:45.3714442Z Switched to a new branch 'main'
+2026-07-26T07:14:45.3718384Z branch 'main' set up to track 'origin/main'.
+2026-07-26T07:14:45.3725161Z ##[debug]0
+2026-07-26T07:14:45.3727789Z ##[debug]branch 'main' set up to track 'origin/main'.
+2026-07-26T07:14:45.3729617Z ##[debug]
+2026-07-26T07:14:45.3731478Z ::endgroup::
+2026-07-26T07:14:45.3732370Z ##[endgroup]
+2026-07-26T07:14:45.3768719Z ##[debug]0
+2026-07-26T07:14:45.3771105Z ##[debug]commit 7694381c6bcbc255b7fc4316a29eb34a26991561
+2026-07-26T07:14:45.3773214Z ##[debug]Author: Akik Faraji <theakikfaraji@gmail.com>
+2026-07-26T07:14:45.3775029Z ##[debug]Date:   Sun Jul 26 13:07:57 2026 +0600
+2026-07-26T07:14:45.3776231Z ##[debug]
+2026-07-26T07:14:45.3777196Z ##[debug]    Initial Watcha project
+2026-07-26T07:14:45.3778687Z ##[debug]
+2026-07-26T07:14:45.3779718Z [command]/usr/bin/git log -1 --format=%H
+2026-07-26T07:14:45.3800722Z 7694381c6bcbc255b7fc4316a29eb34a26991561
+2026-07-26T07:14:45.3804995Z ##[debug]0
+2026-07-26T07:14:45.3806640Z ##[debug]7694381c6bcbc255b7fc4316a29eb34a26991561
+2026-07-26T07:14:45.3808173Z ##[debug]
+2026-07-26T07:14:45.3812069Z ##[debug]Unsetting HOME override
+2026-07-26T07:14:45.3827482Z ::remove-matcher owner=checkout-git::
+2026-07-26T07:14:45.3850479Z ##[debug]Removed matchers: 'checkout-git'
+2026-07-26T07:14:45.4083089Z ##[debug]Node Action run completed with exit code 0
+2026-07-26T07:14:45.4128670Z ##[debug]Save intra-action state isPost = true
+2026-07-26T07:14:45.4130310Z ##[debug]Save intra-action state setSafeDirectory = true
+2026-07-26T07:14:45.4132579Z ##[debug]Save intra-action state repositoryPath = /home/runner/work/Watcha/Watcha
+2026-07-26T07:14:45.4140574Z ##[debug]Set output commit = 7694381c6bcbc255b7fc4316a29eb34a26991561
+2026-07-26T07:14:45.4142732Z ##[debug]Set output ref = refs/heads/main
+2026-07-26T07:14:45.4162300Z ##[debug]Finishing: Checkout Repository
+2026-07-26T07:14:45.4194310Z ##[debug]Evaluating condition for step: 'Set up JDK 17'
+2026-07-26T07:14:45.4200044Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.4201514Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.4203041Z ##[debug]=> true
+2026-07-26T07:14:45.4204460Z ##[debug]Result: true
+2026-07-26T07:14:45.4206325Z ##[debug]Starting: Set up JDK 17
+2026-07-26T07:14:45.4299050Z ##[debug]Register post job cleanup for action: actions/setup-java@v4
+2026-07-26T07:14:45.4332292Z ##[debug]Loading inputs
+2026-07-26T07:14:45.4376397Z ##[debug]Evaluating: job.status
+2026-07-26T07:14:45.4378044Z ##[debug]Evaluating Index:
+2026-07-26T07:14:45.4379099Z ##[debug]..Evaluating job:
+2026-07-26T07:14:45.4380071Z ##[debug]..=> Object
+2026-07-26T07:14:45.4381008Z ##[debug]..Evaluating String:
+2026-07-26T07:14:45.4382073Z ##[debug]..=> 'status'
+2026-07-26T07:14:45.4383120Z ##[debug]=> 'success'
+2026-07-26T07:14:45.4384017Z ##[debug]Result: 'success'
+2026-07-26T07:14:45.4394382Z ##[debug]Evaluating: (((github.server_url == 'https://github.com') && github.token) || '')
+2026-07-26T07:14:45.4396352Z ##[debug]Evaluating Or:
+2026-07-26T07:14:45.4400112Z ##[debug]..Evaluating And:
+2026-07-26T07:14:45.4402749Z ##[debug]....Evaluating Equal:
+2026-07-26T07:14:45.4404598Z ##[debug]......Evaluating Index:
+2026-07-26T07:14:45.4405765Z ##[debug]........Evaluating github:
+2026-07-26T07:14:45.4406915Z ##[debug]........=> Object
+2026-07-26T07:14:45.4408255Z ##[debug]........Evaluating String:
+2026-07-26T07:14:45.4409383Z ##[debug]........=> 'server_url'
+2026-07-26T07:14:45.4410518Z ##[debug]......=> 'https://github.com'
+2026-07-26T07:14:45.4411688Z ##[debug]......Evaluating String:
+2026-07-26T07:14:45.4412799Z ##[debug]......=> 'https://github.com'
+2026-07-26T07:14:45.4417009Z ##[debug]....=> true
+2026-07-26T07:14:45.4418454Z ##[debug]....Evaluating Index:
+2026-07-26T07:14:45.4419850Z ##[debug]......Evaluating github:
+2026-07-26T07:14:45.4421298Z ##[debug]......=> Object
+2026-07-26T07:14:45.4422345Z ##[debug]......Evaluating String:
+2026-07-26T07:14:45.4423437Z ##[debug]......=> 'token'
+2026-07-26T07:14:45.4433770Z ##[debug]....=> '***'
+2026-07-26T07:14:45.4443205Z ##[debug]..=> '***'
+2026-07-26T07:14:45.4453039Z ##[debug]=> '***'
+2026-07-26T07:14:45.4468955Z ##[debug]Expanded: ((('https://github.com' == 'https://github.com') && '***') || '')
+2026-07-26T07:14:45.4479066Z ##[debug]Result: '***'
+2026-07-26T07:14:45.4493146Z ##[debug]Loading env
+2026-07-26T07:14:45.4513835Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-26T07:14:45.4520537Z ##[group]Run actions/setup-java@v4
+2026-07-26T07:14:45.4522228Z with:
+2026-07-26T07:14:45.4523028Z   java-version: 17
+2026-07-26T07:14:45.4524504Z   distribution: temurin
+2026-07-26T07:14:45.4525610Z   cache: gradle
+2026-07-26T07:14:45.4526699Z   java-package: jdk
+2026-07-26T07:14:45.4529032Z   check-latest: false
+2026-07-26T07:14:45.4530430Z   server-id: github
+2026-07-26T07:14:45.4531441Z   server-username: GITHUB_ACTOR
+2026-07-26T07:14:45.4533107Z   server-password: GITHUB_TOKEN
+2026-07-26T07:14:45.4535317Z   overwrite-settings: true
+2026-07-26T07:14:45.4536839Z   job-status: success
+2026-07-26T07:14:45.4553265Z   token: ***
+2026-07-26T07:14:45.4554629Z ##[endgroup]
+2026-07-26T07:14:45.6269886Z ::group::Installed distributions
+2026-07-26T07:14:45.6271629Z ##[group]Installed distributions
+2026-07-26T07:14:45.6353102Z ##[debug]isExplicit: 11.0.31-11
+2026-07-26T07:14:45.6355260Z ##[debug]explicit? true
+2026-07-26T07:14:45.6411331Z ##[debug]isExplicit: 17.0.19-10
+2026-07-26T07:14:45.6413507Z ##[debug]explicit? true
+2026-07-26T07:14:45.6415082Z ##[debug]isExplicit: 21.0.11-10
+2026-07-26T07:14:45.6417414Z ##[debug]explicit? true
+2026-07-26T07:14:45.6419619Z ##[debug]isExplicit: 25.0.3-9
+2026-07-26T07:14:45.6421281Z ##[debug]explicit? true
+2026-07-26T07:14:45.6423163Z ##[debug]isExplicit: 8.0.492-9
+2026-07-26T07:14:45.6424692Z ##[debug]explicit? true
+2026-07-26T07:14:45.6429398Z Resolved Java 17.0.19+10 from tool-cache
+2026-07-26T07:14:45.6430766Z Setting Java 17.0.19+10 as the default
+2026-07-26T07:14:45.6439616Z (node:2176) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-26T07:14:45.6442708Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-26T07:14:45.6444735Z Creating toolchains.xml for JDK version 17 from temurin
+2026-07-26T07:14:45.6522590Z Writing to /home/runner/.m2/toolchains.xml
+2026-07-26T07:14:45.6523779Z 
+2026-07-26T07:14:45.6524299Z Java configuration:
+2026-07-26T07:14:45.6525349Z   Distribution: temurin
+2026-07-26T07:14:45.6526263Z   Version: 17.0.19+10
+2026-07-26T07:14:45.6528069Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.6529186Z 
+2026-07-26T07:14:45.6530375Z ::endgroup::
+2026-07-26T07:14:45.6531384Z ##[endgroup]
+2026-07-26T07:14:45.6540118Z ##[add-matcher]/home/runner/work/_actions/actions/setup-java/v4/.github/java.json
+2026-07-26T07:14:45.6555997Z ##[debug]Added matchers: 'java'. Problem matchers scan action output for known warning or error strings and report these inline.
+2026-07-26T07:14:45.6559840Z Creating settings.xml with server-id: github
+2026-07-26T07:14:45.6561659Z Writing to /home/runner/.m2/settings.xml
+2026-07-26T07:14:45.6564142Z ##[debug]followSymbolicLinks 'true'
+2026-07-26T07:14:45.6585593Z ##[debug]followSymbolicLinks 'true'
+2026-07-26T07:14:45.6588290Z ##[debug]implicitDescendants 'true'
+2026-07-26T07:14:45.6590742Z ##[debug]matchDirectories 'true'
+2026-07-26T07:14:45.6593144Z ##[debug]omitBrokenSymbolicLinks 'true'
+2026-07-26T07:14:45.6595645Z ##[debug]excludeHiddenFiles 'false'
+2026-07-26T07:14:45.6608170Z ##[debug]Search path '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:45.6752518Z ##[debug]/home/runner/work/Watcha/Watcha/app/build.gradle.kts
+2026-07-26T07:14:45.7054978Z ##[debug]/home/runner/work/Watcha/Watcha/build.gradle.kts
+2026-07-26T07:14:45.7076948Z ##[debug]/home/runner/work/Watcha/Watcha/gradle/libs.versions.toml
+2026-07-26T07:14:45.7088167Z ##[debug]/home/runner/work/Watcha/Watcha/gradle/wrapper/gradle-wrapper.properties
+2026-07-26T07:14:45.7099376Z ##[debug]/home/runner/work/Watcha/Watcha/settings.gradle.kts
+2026-07-26T07:14:45.7108828Z ##[debug]Found 5 files to hash.
+2026-07-26T07:14:45.7112240Z ##[debug]primary key is setup-java-Linux-x64-gradle-05a2297f46f76bcbc146eb64e21ca24d75f21f18f2606f0967b523dea524f887
+2026-07-26T07:14:45.7115900Z ##[debug]Cache service version: v2
+2026-07-26T07:14:45.7118302Z ##[debug]Resolved Keys:
+2026-07-26T07:14:45.7120984Z ##[debug]["setup-java-Linux-x64-gradle-05a2297f46f76bcbc146eb64e21ca24d75f21f18f2606f0967b523dea524f887"]
+2026-07-26T07:14:45.7124150Z ##[debug]Checking zstd --quiet --version
+2026-07-26T07:14:45.7591323Z ##[debug]1.5.7
+2026-07-26T07:14:45.7593367Z ##[debug]zstd version: 1.5.7
+2026-07-26T07:14:45.7603978Z ##[debug][Request] GetCacheEntryDownloadURL https://results-receiver.actions.githubusercontent.com/twirp/github.actions.results.api.v1.CacheService/GetCacheEntryDownloadURL
+2026-07-26T07:14:45.8501863Z ##[debug][Response] - 200
+2026-07-26T07:14:45.8503899Z ##[debug]Headers: {
+2026-07-26T07:14:45.8504793Z ##[debug]  "content-length": "54",
+2026-07-26T07:14:45.8505920Z ##[debug]  "content-type": "application/json",
+2026-07-26T07:14:45.8507162Z ##[debug]  "date": "Sun, 26 Jul 2026 07:14:45 GMT",
+2026-07-26T07:14:45.8508797Z ##[debug]  "x-github-backend": "Kubernetes",
+2026-07-26T07:14:45.8510526Z ##[debug]  "x-github-request-id": "F828:29F1E9:1DFE0C2:24F8FED:6A65B3E5",
+2026-07-26T07:14:45.8512234Z ##[debug]  "server": "github.com"
+2026-07-26T07:14:45.8513213Z ##[debug]}
+2026-07-26T07:14:45.8514564Z ##[debug]Body: {
+2026-07-26T07:14:45.8515451Z ##[debug]  "ok": false,
+2026-07-26T07:14:45.8516344Z ##[debug]  "signed_download_url": "",
+2026-07-26T07:14:45.8517452Z ##[debug]  "matched_key": ""
+2026-07-26T07:14:45.8518864Z ##[debug]}
+2026-07-26T07:14:45.8522487Z ##[debug]Cache not found for version 5015d68fc48322bc962181073013e02b525502a4093566f767969e784014b308 of keys: setup-java-Linux-x64-gradle-05a2297f46f76bcbc146eb64e21ca24d75f21f18f2606f0967b523dea524f887
+2026-07-26T07:14:45.8526129Z gradle cache is not found
+2026-07-26T07:14:45.8604066Z ##[debug]Node Action run completed with exit code 0
+2026-07-26T07:14:45.8615556Z ##[debug]JAVA_HOME='/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64'
+2026-07-26T07:14:45.8618464Z ##[debug]JAVA_HOME_17_X64='/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64'
+2026-07-26T07:14:45.8624452Z ##[debug]Save intra-action state cache-primary-key = setup-java-Linux-x64-gradle-05a2297f46f76bcbc146eb64e21ca24d75f21f18f2606f0967b523dea524f887
+2026-07-26T07:14:45.8627943Z ##[debug]Set output distribution = Temurin-Hotspot
+2026-07-26T07:14:45.8629775Z ##[debug]Set output path = /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.8631503Z ##[debug]Set output version = 17.0.19+10
+2026-07-26T07:14:45.8632632Z ##[debug]Set output cache-hit = false
+2026-07-26T07:14:45.8636154Z ##[debug]Finishing: Set up JDK 17
+2026-07-26T07:14:45.8660177Z ##[debug]Evaluating condition for step: 'Grant execute permission for gradlew'
+2026-07-26T07:14:45.8664659Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.8666052Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.8667447Z ##[debug]=> true
+2026-07-26T07:14:45.8669070Z ##[debug]Result: true
+2026-07-26T07:14:45.8670791Z ##[debug]Starting: Grant execute permission for gradlew
+2026-07-26T07:14:45.8693208Z ##[debug]Loading inputs
+2026-07-26T07:14:45.8696347Z ##[debug]Loading env
+2026-07-26T07:14:45.8723033Z ##[group]Run chmod +x gradlew || true
+2026-07-26T07:14:45.8724211Z [36;1mchmod +x gradlew || true[0m
+2026-07-26T07:14:45.8782051Z shell: /usr/bin/bash -e {0}
+2026-07-26T07:14:45.8783245Z env:
+2026-07-26T07:14:45.8784391Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.8786355Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.8788192Z ##[endgroup]
+2026-07-26T07:14:45.8872261Z ##[debug]/usr/bin/bash -e /home/runner/work/_temp/76768ed3-861d-44f8-b404-1edbacf8c662.sh
+2026-07-26T07:14:45.8924959Z ##[debug]Finishing: Grant execute permission for gradlew
+2026-07-26T07:14:45.8944561Z ##[debug]Evaluating condition for step: 'Build Debug APK'
+2026-07-26T07:14:45.8948352Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.8949668Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.8950966Z ##[debug]=> true
+2026-07-26T07:14:45.8952192Z ##[debug]Result: true
+2026-07-26T07:14:45.8953657Z ##[debug]Starting: Build Debug APK
+2026-07-26T07:14:45.8973716Z ##[debug]Loading inputs
+2026-07-26T07:14:45.8976696Z ##[debug]Loading env
+2026-07-26T07:14:45.8989414Z ##[group]Run ./gradlew assembleDebug --stacktrace
+2026-07-26T07:14:45.8990676Z [36;1m./gradlew assembleDebug --stacktrace[0m
+2026-07-26T07:14:45.9041288Z shell: /usr/bin/bash -e {0}
+2026-07-26T07:14:45.9042196Z env:
+2026-07-26T07:14:45.9043291Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.9045126Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.9046579Z ##[endgroup]
+2026-07-26T07:14:45.9108374Z ##[debug]/usr/bin/bash -e /home/runner/work/_temp/defc2273-e012-4124-84b9-2d7762da70a5.sh
+2026-07-26T07:14:45.9376268Z Error: Invalid or corrupt jarfile /home/runner/work/Watcha/Watcha/gradle/wrapper/gradle-wrapper.jar
+2026-07-26T07:14:45.9390104Z ##[error]Process completed with exit code 1.
+2026-07-26T07:14:45.9407239Z ##[debug]Finishing: Build Debug APK
+2026-07-26T07:14:45.9437425Z ##[debug]Evaluating condition for step: 'Run Unit Tests'
+2026-07-26T07:14:45.9441357Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.9442724Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.9444042Z ##[debug]=> false
+2026-07-26T07:14:45.9445253Z ##[debug]Result: false
+2026-07-26T07:14:45.9460864Z ##[debug]Evaluating condition for step: 'Upload Debug APK Artifact'
+2026-07-26T07:14:45.9464340Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.9465641Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.9466919Z ##[debug]=> false
+2026-07-26T07:14:45.9468705Z ##[debug]Result: false
+2026-07-26T07:14:45.9506325Z ##[debug]Evaluating condition for step: 'Post Set up JDK 17'
+2026-07-26T07:14:45.9511088Z ##[debug]Evaluating: always()
+2026-07-26T07:14:45.9512415Z ##[debug]Evaluating always:
+2026-07-26T07:14:45.9514068Z ##[debug]=> true
+2026-07-26T07:14:45.9515302Z ##[debug]Result: true
+2026-07-26T07:14:45.9516740Z ##[debug]Starting: Post Set up JDK 17
+2026-07-26T07:14:45.9614156Z ##[debug]Loading inputs
+2026-07-26T07:14:45.9639627Z ##[debug]Evaluating: job.status
+2026-07-26T07:14:45.9640622Z ##[debug]Evaluating Index:
+2026-07-26T07:14:45.9641538Z ##[debug]..Evaluating job:
+2026-07-26T07:14:45.9642471Z ##[debug]..=> Object
+2026-07-26T07:14:45.9643391Z ##[debug]..Evaluating String:
+2026-07-26T07:14:45.9644331Z ##[debug]..=> 'status'
+2026-07-26T07:14:45.9645242Z ##[debug]=> 'failure'
+2026-07-26T07:14:45.9646110Z ##[debug]Result: 'failure'
+2026-07-26T07:14:45.9650660Z ##[debug]Evaluating: (((github.server_url == 'https://github.com') && github.token) || '')
+2026-07-26T07:14:45.9652323Z ##[debug]Evaluating Or:
+2026-07-26T07:14:45.9653226Z ##[debug]..Evaluating And:
+2026-07-26T07:14:45.9654160Z ##[debug]....Evaluating Equal:
+2026-07-26T07:14:45.9655132Z ##[debug]......Evaluating Index:
+2026-07-26T07:14:45.9656108Z ##[debug]........Evaluating github:
+2026-07-26T07:14:45.9657117Z ##[debug]........=> Object
+2026-07-26T07:14:45.9658309Z ##[debug]........Evaluating String:
+2026-07-26T07:14:45.9659324Z ##[debug]........=> 'server_url'
+2026-07-26T07:14:45.9660356Z ##[debug]......=> 'https://github.com'
+2026-07-26T07:14:45.9661419Z ##[debug]......Evaluating String:
+2026-07-26T07:14:45.9662661Z ##[debug]......=> 'https://github.com'
+2026-07-26T07:14:45.9663690Z ##[debug]....=> true
+2026-07-26T07:14:45.9664542Z ##[debug]....Evaluating Index:
+2026-07-26T07:14:45.9665512Z ##[debug]......Evaluating github:
+2026-07-26T07:14:45.9666478Z ##[debug]......=> Object
+2026-07-26T07:14:45.9667384Z ##[debug]......Evaluating String:
+2026-07-26T07:14:45.9668468Z ##[debug]......=> 'token'
+2026-07-26T07:14:45.9676559Z ##[debug]....=> '***'
+2026-07-26T07:14:45.9684660Z ##[debug]..=> '***'
+2026-07-26T07:14:45.9692876Z ##[debug]=> '***'
+2026-07-26T07:14:45.9701594Z ##[debug]Expanded: ((('https://github.com' == 'https://github.com') && '***') || '')
+2026-07-26T07:14:45.9710136Z ##[debug]Result: '***'
+2026-07-26T07:14:45.9722826Z ##[debug]Loading env
+2026-07-26T07:14:45.9770275Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-26T07:14:45.9774451Z Post job cleanup.
+2026-07-26T07:14:46.1075789Z (node:2203) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-26T07:14:46.1079039Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-26T07:14:46.1181808Z ##[debug]Node Action run completed with exit code 0
+2026-07-26T07:14:46.1188815Z ##[debug]Finishing: Post Set up JDK 17
+2026-07-26T07:14:46.1209786Z ##[debug]Evaluating condition for step: 'Post Checkout Repository'
+2026-07-26T07:14:46.1214180Z ##[debug]Evaluating: always()
+2026-07-26T07:14:46.1215504Z ##[debug]Evaluating always:
+2026-07-26T07:14:46.1216743Z ##[debug]=> true
+2026-07-26T07:14:46.1218258Z ##[debug]Result: true
+2026-07-26T07:14:46.1219843Z ##[debug]Starting: Post Checkout Repository
+2026-07-26T07:14:46.1325915Z ##[debug]Loading inputs
+2026-07-26T07:14:46.1331512Z ##[debug]Evaluating: github.repository
+2026-07-26T07:14:46.1332900Z ##[debug]Evaluating Index:
+2026-07-26T07:14:46.1333944Z ##[debug]..Evaluating github:
+2026-07-26T07:14:46.1334942Z ##[debug]..=> Object
+2026-07-26T07:14:46.1335832Z ##[debug]..Evaluating String:
+2026-07-26T07:14:46.1336797Z ##[debug]..=> 'repository'
+2026-07-26T07:14:46.1338652Z ##[debug]=> 'thenobody52/Watcha'
+2026-07-26T07:14:46.1340730Z ##[debug]Result: 'thenobody52/Watcha'
+2026-07-26T07:14:46.1347954Z ##[debug]Evaluating: github.token
+2026-07-26T07:14:46.1349558Z ##[debug]Evaluating Index:
+2026-07-26T07:14:46.1351199Z ##[debug]..Evaluating github:
+2026-07-26T07:14:46.1353307Z ##[debug]..=> Object
+2026-07-26T07:14:46.1355116Z ##[debug]..Evaluating String:
+2026-07-26T07:14:46.1356824Z ##[debug]..=> 'token'
+2026-07-26T07:14:46.1370422Z ##[debug]=> '***'
+2026-07-26T07:14:46.1378551Z ##[debug]Result: '***'
+2026-07-26T07:14:46.1431941Z ##[debug]Loading env
+2026-07-26T07:14:46.1452243Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-26T07:14:46.1456481Z Post job cleanup.
+2026-07-26T07:14:46.2490965Z ##[debug]Getting git version
+2026-07-26T07:14:46.2493284Z [command]/usr/bin/git version
+2026-07-26T07:14:46.2548933Z git version 2.54.0
+2026-07-26T07:14:46.2567319Z ##[debug]0
+2026-07-26T07:14:46.2570040Z ##[debug]git version 2.54.0
+2026-07-26T07:14:46.2571277Z ##[debug]
+2026-07-26T07:14:46.2574188Z ##[debug]Set git useragent to: git/2.54.0 (github-actions-checkout)
+2026-07-26T07:14:46.2577899Z ::add-mask::***
+2026-07-26T07:14:46.2592082Z Temporarily overriding HOME='/home/runner/work/_temp/dc15a412-440a-4064-bf04-46c33d2a6802' before making global git config changes
+2026-07-26T07:14:46.2599625Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-26T07:14:46.2603567Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Watcha/Watcha
+2026-07-26T07:14:46.2652499Z ##[debug]0
+2026-07-26T07:14:46.2654589Z ##[debug]
+2026-07-26T07:14:46.2663447Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-26T07:14:46.2709612Z ##[debug]1
+2026-07-26T07:14:46.2719123Z ##[debug]
+2026-07-26T07:14:46.2723231Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-26T07:14:46.3030903Z ##[debug]0
+2026-07-26T07:14:46.3044622Z ##[debug]
+2026-07-26T07:14:46.3047368Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-26T07:14:46.3070862Z http.https://github.com/.extraheader
+2026-07-26T07:14:46.3096160Z ##[debug]0
+2026-07-26T07:14:46.3098866Z ##[debug]http.https://github.com/.extraheader
+2026-07-26T07:14:46.3100432Z ##[debug]
+2026-07-26T07:14:46.3102698Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-26T07:14:46.3124729Z ##[debug]0
+2026-07-26T07:14:46.3132167Z ##[debug]
+2026-07-26T07:14:46.3138078Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-26T07:14:46.3475021Z ##[debug]0
+2026-07-26T07:14:46.3499204Z ##[debug]
+2026-07-26T07:14:46.3501983Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-26T07:14:46.3527056Z ##[debug]1
+2026-07-26T07:14:46.3533953Z ##[debug]
+2026-07-26T07:14:46.3538398Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-26T07:14:46.3849915Z ##[debug]0
+2026-07-26T07:14:46.3852425Z ##[debug]
+2026-07-26T07:14:46.3855055Z ##[debug]Unsetting HOME override
+2026-07-26T07:14:46.3950923Z ##[debug]Node Action run completed with exit code 0
+2026-07-26T07:14:46.3957983Z ##[debug]Finishing: Post Checkout Repository
+2026-07-26T07:14:46.4023111Z ##[debug]Starting: Complete job
+2026-07-26T07:14:46.4027876Z Uploading runner diagnostic logs
+2026-07-26T07:14:46.4041555Z ##[debug]Starting diagnostic file upload.
+2026-07-26T07:14:46.4042726Z ##[debug]Setting up diagnostic log folders.
+2026-07-26T07:14:46.4047172Z ##[debug]Creating diagnostic log files folder.
+2026-07-26T07:14:46.4058251Z ##[debug]Copying 1 worker diagnostic logs.
+2026-07-26T07:14:46.4069245Z ##[debug]Copying 1 runner diagnostic logs.
+2026-07-26T07:14:46.4071582Z ##[debug]Zipping diagnostic files.
+2026-07-26T07:14:46.4148026Z ##[debug]Uploading diagnostic metadata file.
+2026-07-26T07:14:46.4185970Z ##[debug]Diagnostic file upload complete.
+2026-07-26T07:14:46.4187843Z Completed runner diagnostic log upload
+2026-07-26T07:14:46.4188886Z Cleaning up orphan processes
+2026-07-26T07:14:46.4551687Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-26T07:14:46.4557106Z ##[debug]Finishing: Complete job
+2026-07-26T07:14:46.4599857Z ##[debug]Finishing: build

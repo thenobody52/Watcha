@@ -1,0 +1,19 @@
+﻿2026-07-26T07:14:45.8944543Z ##[debug]Evaluating condition for step: 'Build Debug APK'
+2026-07-26T07:14:45.8948342Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.8949661Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.8950960Z ##[debug]=> true
+2026-07-26T07:14:45.8952188Z ##[debug]Result: true
+2026-07-26T07:14:45.8953651Z ##[debug]Starting: Build Debug APK
+2026-07-26T07:14:45.8973695Z ##[debug]Loading inputs
+2026-07-26T07:14:45.8976687Z ##[debug]Loading env
+2026-07-26T07:14:45.8989403Z ##[group]Run ./gradlew assembleDebug --stacktrace
+2026-07-26T07:14:45.8990670Z [36;1m./gradlew assembleDebug --stacktrace[0m
+2026-07-26T07:14:45.9041271Z shell: /usr/bin/bash -e {0}
+2026-07-26T07:14:45.9042189Z env:
+2026-07-26T07:14:45.9043284Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.9045120Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.9046572Z ##[endgroup]
+2026-07-26T07:14:45.9108293Z ##[debug]/usr/bin/bash -e /home/runner/work/_temp/defc2273-e012-4124-84b9-2d7762da70a5.sh
+2026-07-26T07:14:45.9376219Z Error: Invalid or corrupt jarfile /home/runner/work/Watcha/Watcha/gradle/wrapper/gradle-wrapper.jar
+2026-07-26T07:14:45.9390078Z ##[error]Process completed with exit code 1.
+2026-07-26T07:14:45.9407223Z ##[debug]Finishing: Build Debug APK

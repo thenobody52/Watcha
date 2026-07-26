@@ -1,0 +1,5 @@
+﻿2026-07-26T07:14:45.9460841Z ##[debug]Evaluating condition for step: 'Upload Debug APK Artifact'
+2026-07-26T07:14:45.9464332Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.9465636Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.9466911Z ##[debug]=> false
+2026-07-26T07:14:45.9468695Z ##[debug]Result: false

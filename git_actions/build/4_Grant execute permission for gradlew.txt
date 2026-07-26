@@ -1,0 +1,17 @@
+﻿2026-07-26T07:14:45.8660157Z ##[debug]Evaluating condition for step: 'Grant execute permission for gradlew'
+2026-07-26T07:14:45.8664651Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.8666045Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.8667443Z ##[debug]=> true
+2026-07-26T07:14:45.8669064Z ##[debug]Result: true
+2026-07-26T07:14:45.8670785Z ##[debug]Starting: Grant execute permission for gradlew
+2026-07-26T07:14:45.8693187Z ##[debug]Loading inputs
+2026-07-26T07:14:45.8696340Z ##[debug]Loading env
+2026-07-26T07:14:45.8723003Z ##[group]Run chmod +x gradlew || true
+2026-07-26T07:14:45.8724204Z [36;1mchmod +x gradlew || true[0m
+2026-07-26T07:14:45.8782030Z shell: /usr/bin/bash -e {0}
+2026-07-26T07:14:45.8783236Z env:
+2026-07-26T07:14:45.8784384Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.8786350Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.8788187Z ##[endgroup]
+2026-07-26T07:14:45.8872172Z ##[debug]/usr/bin/bash -e /home/runner/work/_temp/76768ed3-861d-44f8-b404-1edbacf8c662.sh
+2026-07-26T07:14:45.8924940Z ##[debug]Finishing: Grant execute permission for gradlew

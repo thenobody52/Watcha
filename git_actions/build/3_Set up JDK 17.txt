@@ -1,0 +1,131 @@
+﻿2026-07-26T07:14:45.4194294Z ##[debug]Evaluating condition for step: 'Set up JDK 17'
+2026-07-26T07:14:45.4200029Z ##[debug]Evaluating: success()
+2026-07-26T07:14:45.4201508Z ##[debug]Evaluating success:
+2026-07-26T07:14:45.4203034Z ##[debug]=> true
+2026-07-26T07:14:45.4204454Z ##[debug]Result: true
+2026-07-26T07:14:45.4206317Z ##[debug]Starting: Set up JDK 17
+2026-07-26T07:14:45.4299030Z ##[debug]Register post job cleanup for action: actions/setup-java@v4
+2026-07-26T07:14:45.4332262Z ##[debug]Loading inputs
+2026-07-26T07:14:45.4376379Z ##[debug]Evaluating: job.status
+2026-07-26T07:14:45.4378037Z ##[debug]Evaluating Index:
+2026-07-26T07:14:45.4379091Z ##[debug]..Evaluating job:
+2026-07-26T07:14:45.4380064Z ##[debug]..=> Object
+2026-07-26T07:14:45.4380994Z ##[debug]..Evaluating String:
+2026-07-26T07:14:45.4382067Z ##[debug]..=> 'status'
+2026-07-26T07:14:45.4383115Z ##[debug]=> 'success'
+2026-07-26T07:14:45.4384010Z ##[debug]Result: 'success'
+2026-07-26T07:14:45.4394299Z ##[debug]Evaluating: (((github.server_url == 'https://github.com') && github.token) || '')
+2026-07-26T07:14:45.4396344Z ##[debug]Evaluating Or:
+2026-07-26T07:14:45.4400092Z ##[debug]..Evaluating And:
+2026-07-26T07:14:45.4402732Z ##[debug]....Evaluating Equal:
+2026-07-26T07:14:45.4404585Z ##[debug]......Evaluating Index:
+2026-07-26T07:14:45.4405758Z ##[debug]........Evaluating github:
+2026-07-26T07:14:45.4406907Z ##[debug]........=> Object
+2026-07-26T07:14:45.4408251Z ##[debug]........Evaluating String:
+2026-07-26T07:14:45.4409376Z ##[debug]........=> 'server_url'
+2026-07-26T07:14:45.4410513Z ##[debug]......=> 'https://github.com'
+2026-07-26T07:14:45.4411682Z ##[debug]......Evaluating String:
+2026-07-26T07:14:45.4412792Z ##[debug]......=> 'https://github.com'
+2026-07-26T07:14:45.4416992Z ##[debug]....=> true
+2026-07-26T07:14:45.4418441Z ##[debug]....Evaluating Index:
+2026-07-26T07:14:45.4419843Z ##[debug]......Evaluating github:
+2026-07-26T07:14:45.4421293Z ##[debug]......=> Object
+2026-07-26T07:14:45.4422338Z ##[debug]......Evaluating String:
+2026-07-26T07:14:45.4423424Z ##[debug]......=> 'token'
+2026-07-26T07:14:45.4433765Z ##[debug]....=> '***'
+2026-07-26T07:14:45.4443198Z ##[debug]..=> '***'
+2026-07-26T07:14:45.4453032Z ##[debug]=> '***'
+2026-07-26T07:14:45.4468933Z ##[debug]Expanded: ((('https://github.com' == 'https://github.com') && '***') || '')
+2026-07-26T07:14:45.4479061Z ##[debug]Result: '***'
+2026-07-26T07:14:45.4493127Z ##[debug]Loading env
+2026-07-26T07:14:45.4513819Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-26T07:14:45.4520526Z ##[group]Run actions/setup-java@v4
+2026-07-26T07:14:45.4522219Z with:
+2026-07-26T07:14:45.4523024Z   java-version: 17
+2026-07-26T07:14:45.4524497Z   distribution: temurin
+2026-07-26T07:14:45.4525605Z   cache: gradle
+2026-07-26T07:14:45.4526684Z   java-package: jdk
+2026-07-26T07:14:45.4529026Z   check-latest: false
+2026-07-26T07:14:45.4530423Z   server-id: github
+2026-07-26T07:14:45.4531435Z   server-username: GITHUB_ACTOR
+2026-07-26T07:14:45.4533101Z   server-password: GITHUB_TOKEN
+2026-07-26T07:14:45.4535314Z   overwrite-settings: true
+2026-07-26T07:14:45.4536832Z   job-status: success
+2026-07-26T07:14:45.4553256Z   token: ***
+2026-07-26T07:14:45.4554621Z ##[endgroup]
+2026-07-26T07:14:45.6269786Z ::group::Installed distributions
+2026-07-26T07:14:45.6271612Z ##[group]Installed distributions
+2026-07-26T07:14:45.6353076Z ##[debug]isExplicit: 11.0.31-11
+2026-07-26T07:14:45.6355250Z ##[debug]explicit? true
+2026-07-26T07:14:45.6411301Z ##[debug]isExplicit: 17.0.19-10
+2026-07-26T07:14:45.6413497Z ##[debug]explicit? true
+2026-07-26T07:14:45.6415073Z ##[debug]isExplicit: 21.0.11-10
+2026-07-26T07:14:45.6417405Z ##[debug]explicit? true
+2026-07-26T07:14:45.6419608Z ##[debug]isExplicit: 25.0.3-9
+2026-07-26T07:14:45.6421273Z ##[debug]explicit? true
+2026-07-26T07:14:45.6422769Z ##[debug]isExplicit: 8.0.492-9
+2026-07-26T07:14:45.6424686Z ##[debug]explicit? true
+2026-07-26T07:14:45.6429385Z Resolved Java 17.0.19+10 from tool-cache
+2026-07-26T07:14:45.6430758Z Setting Java 17.0.19+10 as the default
+2026-07-26T07:14:45.6439590Z (node:2176) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-26T07:14:45.6442698Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-26T07:14:45.6444727Z Creating toolchains.xml for JDK version 17 from temurin
+2026-07-26T07:14:45.6522554Z Writing to /home/runner/.m2/toolchains.xml
+2026-07-26T07:14:45.6523772Z 
+2026-07-26T07:14:45.6524291Z Java configuration:
+2026-07-26T07:14:45.6525340Z   Distribution: temurin
+2026-07-26T07:14:45.6526255Z   Version: 17.0.19+10
+2026-07-26T07:14:45.6528060Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.6529182Z 
+2026-07-26T07:14:45.6530361Z ::endgroup::
+2026-07-26T07:14:45.6531355Z ##[endgroup]
+2026-07-26T07:14:45.6540089Z ##[add-matcher]/home/runner/work/_actions/actions/setup-java/v4/.github/java.json
+2026-07-26T07:14:45.6555960Z ##[debug]Added matchers: 'java'. Problem matchers scan action output for known warning or error strings and report these inline.
+2026-07-26T07:14:45.6559828Z Creating settings.xml with server-id: github
+2026-07-26T07:14:45.6561647Z Writing to /home/runner/.m2/settings.xml
+2026-07-26T07:14:45.6564115Z ##[debug]followSymbolicLinks 'true'
+2026-07-26T07:14:45.6585565Z ##[debug]followSymbolicLinks 'true'
+2026-07-26T07:14:45.6588278Z ##[debug]implicitDescendants 'true'
+2026-07-26T07:14:45.6590731Z ##[debug]matchDirectories 'true'
+2026-07-26T07:14:45.6593133Z ##[debug]omitBrokenSymbolicLinks 'true'
+2026-07-26T07:14:45.6595635Z ##[debug]excludeHiddenFiles 'false'
+2026-07-26T07:14:45.6608141Z ##[debug]Search path '/home/runner/work/Watcha/Watcha'
+2026-07-26T07:14:45.6752473Z ##[debug]/home/runner/work/Watcha/Watcha/app/build.gradle.kts
+2026-07-26T07:14:45.7054827Z ##[debug]/home/runner/work/Watcha/Watcha/build.gradle.kts
+2026-07-26T07:14:45.7076896Z ##[debug]/home/runner/work/Watcha/Watcha/gradle/libs.versions.toml
+2026-07-26T07:14:45.7088141Z ##[debug]/home/runner/work/Watcha/Watcha/gradle/wrapper/gradle-wrapper.properties
+2026-07-26T07:14:45.7099356Z ##[debug]/home/runner/work/Watcha/Watcha/settings.gradle.kts
+2026-07-26T07:14:45.7108806Z ##[debug]Found 5 files to hash.
+2026-07-26T07:14:45.7112227Z ##[debug]primary key is setup-java-Linux-x64-gradle-05a2297f46f76bcbc146eb64e21ca24d75f21f18f2606f0967b523dea524f887
+2026-07-26T07:14:45.7115891Z ##[debug]Cache service version: v2
+2026-07-26T07:14:45.7118288Z ##[debug]Resolved Keys:
+2026-07-26T07:14:45.7120976Z ##[debug]["setup-java-Linux-x64-gradle-05a2297f46f76bcbc146eb64e21ca24d75f21f18f2606f0967b523dea524f887"]
+2026-07-26T07:14:45.7124141Z ##[debug]Checking zstd --quiet --version
+2026-07-26T07:14:45.7591253Z ##[debug]1.5.7
+2026-07-26T07:14:45.7593357Z ##[debug]zstd version: 1.5.7
+2026-07-26T07:14:45.7603891Z ##[debug][Request] GetCacheEntryDownloadURL https://results-receiver.actions.githubusercontent.com/twirp/github.actions.results.api.v1.CacheService/GetCacheEntryDownloadURL
+2026-07-26T07:14:45.8501779Z ##[debug][Response] - 200
+2026-07-26T07:14:45.8503886Z ##[debug]Headers: {
+2026-07-26T07:14:45.8504787Z ##[debug]  "content-length": "54",
+2026-07-26T07:14:45.8505914Z ##[debug]  "content-type": "application/json",
+2026-07-26T07:14:45.8507146Z ##[debug]  "date": "Sun, 26 Jul 2026 07:14:45 GMT",
+2026-07-26T07:14:45.8508780Z ##[debug]  "x-github-backend": "Kubernetes",
+2026-07-26T07:14:45.8510518Z ##[debug]  "x-github-request-id": "F828:29F1E9:1DFE0C2:24F8FED:6A65B3E5",
+2026-07-26T07:14:45.8512226Z ##[debug]  "server": "github.com"
+2026-07-26T07:14:45.8513205Z ##[debug]}
+2026-07-26T07:14:45.8514556Z ##[debug]Body: {
+2026-07-26T07:14:45.8515445Z ##[debug]  "ok": false,
+2026-07-26T07:14:45.8516338Z ##[debug]  "signed_download_url": "",
+2026-07-26T07:14:45.8517442Z ##[debug]  "matched_key": ""
+2026-07-26T07:14:45.8518532Z ##[debug]}
+2026-07-26T07:14:45.8522478Z ##[debug]Cache not found for version 5015d68fc48322bc962181073013e02b525502a4093566f767969e784014b308 of keys: setup-java-Linux-x64-gradle-05a2297f46f76bcbc146eb64e21ca24d75f21f18f2606f0967b523dea524f887
+2026-07-26T07:14:45.8526120Z gradle cache is not found
+2026-07-26T07:14:45.8604048Z ##[debug]Node Action run completed with exit code 0
+2026-07-26T07:14:45.8615530Z ##[debug]JAVA_HOME='/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64'
+2026-07-26T07:14:45.8618452Z ##[debug]JAVA_HOME_17_X64='/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64'
+2026-07-26T07:14:45.8624444Z ##[debug]Save intra-action state cache-primary-key = setup-java-Linux-x64-gradle-05a2297f46f76bcbc146eb64e21ca24d75f21f18f2606f0967b523dea524f887
+2026-07-26T07:14:45.8627930Z ##[debug]Set output distribution = Temurin-Hotspot
+2026-07-26T07:14:45.8629762Z ##[debug]Set output path = /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-07-26T07:14:45.8631484Z ##[debug]Set output version = 17.0.19+10
+2026-07-26T07:14:45.8632627Z ##[debug]Set output cache-hit = false
+2026-07-26T07:14:45.8636148Z ##[debug]Finishing: Set up JDK 17
