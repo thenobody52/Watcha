@@ -6,6 +6,7 @@ on:
       - main
     tags:
       - 'v*'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -24,7 +25,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
-      - name: Make gradlew executable
+      - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
       - name: Build Debug APK
@@ -35,15 +36,14 @@ jobs:
         with:
           files: app/build/outputs/apk/debug/app-debug.apk
           tag_name: ${{ github.ref_type == 'tag' && github.ref_name || 'v1.0.0' }}
-          name: ${{ github.ref_type == 'tag' && format('Watcha Media Player {0}', github.ref_name) || 'Watcha Media Player v1.0.0' }}
+          name: Watcha Media Player ${{ github.ref_type == 'tag' && github.ref_name || 'v1.0.0' }}
           body: |
             ## Watcha Media Player Release
             
             Automated build compiled directly by GitHub Actions.
             
-            - **Package**: `app-debug.apk`
+            - **APK File**: `app-debug.apk`
             - **Commit**: `${{ github.sha }}`
-            - **Branch**: `${{ github.ref_name }}`
           draft: false
           prerelease: false
         env:
