@@ -1,4 +1,5 @@
 import java.util.Properties
+import com.android.build.gradle.AppExtension
 
 plugins {
   alias(libs.plugins.android.application)
@@ -60,14 +61,13 @@ android {
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
-  androidComponents {
-    onVariants(selector().all()) { variant ->
-      variant.outputsAreObsolete = true
-      val apkName = "app-${variant.name}_v${versionNameString}.apk"
-      
-      // Instead of manual renaming, let's use the variant's output property if available
-      // Or for a simpler approach given the complexity, set the output file name
-      // via the variant's generated artifact
+  // Use AppExtension to access applicationVariants
+  val androidExtension = extensions.getByType(AppExtension::class.java)
+  androidExtension.applicationVariants.all {
+    val variant = this
+    variant.outputs.all {
+      val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
+      output?.outputFileName = "app-${variant.buildType.name}_v${versionNameString}.apk"
     }
   }
 
