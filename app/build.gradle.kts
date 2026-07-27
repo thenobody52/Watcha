@@ -1,5 +1,4 @@
 import java.util.Properties
-import com.android.build.gradle.AppExtension
 
 plugins {
   alias(libs.plugins.android.application)
@@ -59,16 +58,6 @@ android {
     versionName = versionNameString
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-  }
-
-  // Use AppExtension to access applicationVariants
-  val androidExtension = extensions.getByType(AppExtension::class.java)
-  androidExtension.applicationVariants.all {
-    val variant = this
-    variant.outputs.all {
-      val output = this as? com.android.build.gradle.internal.api.BaseVariantOutputImpl
-      output?.outputFileName = "app-${variant.buildType.name}_v${versionNameString}.apk"
-    }
   }
 
   signingConfigs {
