@@ -19,3 +19,9 @@
 ```
 app/build/outputs/apk/debug/app-debug.apk
 ```
+
+### Troubleshooting
+If you encounter OutOfMemory (OOM) errors during the build, run the command with memory-constrained options:
+```bash
+./gradlew assembleDebug --no-daemon --max-workers=1
+```
