@@ -1,6 +1,16 @@
+import java.util.Properties
+
+plugins {
+  alias(libs.plugins.android.application)
+  alias(libs.plugins.kotlin.compose)
+  alias(libs.plugins.google.devtools.ksp)
+  alias(libs.plugins.roborazzi)
+  alias(libs.plugins.secrets)
+}
+
 // --- Versioning Logic ---
 val versionPropsFile = file("version.properties")
-val versionProps = java.util.Properties()
+val versionProps = Properties()
 if (versionPropsFile.exists()) {
     versionProps.load(versionPropsFile.inputStream())
 } else {
@@ -35,14 +45,6 @@ gradle.taskGraph.whenReady {
 
 val versionNameString = "%02d.%02d.%03d".format(major, minor, patch)
 // --- End Versioning Logic ---
-
-plugins {
-  alias(libs.plugins.android.application)
-  alias(libs.plugins.kotlin.compose)
-  alias(libs.plugins.google.devtools.ksp)
-  alias(libs.plugins.roborazzi)
-  alias(libs.plugins.secrets)
-}
 
 android {
   namespace = "com.example"
