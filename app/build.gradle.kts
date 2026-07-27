@@ -1,4 +1,40 @@
-import com.google.gms.googleservices.GoogleServicesPlugin.MissingGoogleServicesStrategy
+// --- Versioning Logic ---
+val versionPropsFile = file("version.properties")
+val versionProps = java.util.Properties()
+if (versionPropsFile.exists()) {
+    versionProps.load(versionPropsFile.inputStream())
+} else {
+    versionProps.setProperty("versionMajor", "00")
+    versionProps.setProperty("versionMinor", "00")
+    versionProps.setProperty("versionPatch", "000")
+}
+
+var major = versionProps.getProperty("versionMajor").toInt()
+var minor = versionProps.getProperty("versionMinor").toInt()
+var patch = versionProps.getProperty("versionPatch").toInt()
+
+// Increment only if we are actually building
+gradle.taskGraph.whenReady {
+    if (this.hasTask(":app:assembleDebug") || this.hasTask(":app:assembleRelease")) {
+        patch++
+        if (patch > 999) {
+            patch = 0
+            minor++
+        }
+        if (minor > 99) {
+            minor = 0
+            major++
+        }
+        
+        versionProps.setProperty("versionMajor", "%02d".format(major))
+        versionProps.setProperty("versionMinor", "%02d".format(minor))
+        versionProps.setProperty("versionPatch", "%03d".format(patch))
+        versionProps.store(versionPropsFile.writer(), null)
+    }
+}
+
+val versionNameString = "%02d.%02d.%03d".format(major, minor, patch)
+// --- End Versioning Logic ---
 
 plugins {
   alias(libs.plugins.android.application)
@@ -6,7 +42,6 @@ plugins {
   alias(libs.plugins.google.devtools.ksp)
   alias(libs.plugins.roborazzi)
   alias(libs.plugins.secrets)
-  alias(libs.plugins.google.services)
 }
 
 android {
@@ -18,9 +53,17 @@ android {
     minSdk = 24
     targetSdk = 36
     versionCode = 1
-    versionName = "1.0"
+    versionName = versionNameString
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  applicationVariants.all {
+    val variant = this
+    variant.outputs.all {
+      val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
+      output.outputFileName = "app-${variant.buildType.name}_v${versionNameString}.apk"
+    }
   }
 
   signingConfigs {
@@ -66,13 +109,10 @@ secrets {
   defaultPropertiesFileName = ".env.example"
 }
 
-googleServices { missingGoogleServicesStrategy = MissingGoogleServicesStrategy.WARN }
-
 // Some unused dependencies are commented out below instead of being removed.
 // This makes it easy to add them back in the future if needed.
 dependencies {
   implementation(platform(libs.androidx.compose.bom))
-  implementation(platform(libs.firebase.bom))
   implementation(libs.accompanist.permissions)
   implementation(libs.androidx.activity.compose)
   implementation(libs.androidx.compose.material.icons.core)
@@ -91,8 +131,6 @@ dependencies {
   implementation(libs.androidx.room.runtime)
   implementation(libs.coil.compose)
   implementation(libs.converter.moshi)
-  implementation(libs.firebase.ai)
-  implementation(libs.firebase.appcheck.recaptcha)
   implementation(libs.kotlinx.coroutines.android)
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.logging.interceptor)
