@@ -1,4 +1,5 @@
 import java.util.Properties
+import com.android.build.gradle.AppExtension
 
 plugins {
   alias(libs.plugins.android.application)
@@ -60,7 +61,8 @@ android {
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
-  applicationVariants.all {
+  // Modern AGP uses androidComponents, but this is a quick fix for existing variant API
+  (this as com.android.build.gradle.AppExtension).applicationVariants.all {
     val variant = this
     variant.outputs.all {
       val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
